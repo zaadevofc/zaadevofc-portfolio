@@ -1,6 +1,7 @@
 import splitbee from "@splitbee/web";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import aos from "aos";
 import "aos/dist/aos.css";
 import React, { Suspense } from "react";
@@ -33,28 +34,29 @@ const root = ReactDOM.createRoot(document.getElementById("root"), {
 
 root.render(
   // <React.StrictMode>
-    <Suspense fallback={null}>
-      <Analytics />
-      <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
-        innerScale={1}
-        outerScale={2}
-        outerAlpha={0}
-        hasBlendMode={true}
-        innerStyle={{
-          backgroundColor: "#0ea5e9",
-        }}
-        outerStyle={{
-          border: "3px solid #eab308",
-        }}
-      />
-      <ReactLenis root options={lenis}>
-        <ParallaxProvider>
-          <Head />
-          <Home />
-        </ParallaxProvider>
-      </ReactLenis>
-    </Suspense>
+  <Suspense fallback={null}>
+    <Analytics />
+    <SpeedInsights />
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={35}
+      innerScale={1}
+      outerScale={2}
+      outerAlpha={0}
+      hasBlendMode={true}
+      innerStyle={{
+        backgroundColor: "#0ea5e9",
+      }}
+      outerStyle={{
+        border: "3px solid #eab308",
+      }}
+    />
+    <ReactLenis root options={lenis}>
+      <ParallaxProvider>
+        <Head />
+        <Home />
+      </ParallaxProvider>
+    </ReactLenis>
+  </Suspense>
   // </React.StrictMode>
 );
