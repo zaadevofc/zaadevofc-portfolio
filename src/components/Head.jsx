@@ -5,7 +5,7 @@ import { SEO } from "../consts";
 const Head = () => {
   return (
     <>
-      <Helmet>
+      <Helmet> 
         <title>{SEO.TITLE}</title>
         <meta name="author" content="zaadevofc" />
         <meta name="keywords" content={SEO.KEYWORDS} />
