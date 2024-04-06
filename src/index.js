@@ -27,7 +27,7 @@ aos.init({
   easing: "ease-out-cubic",
   once: true,
   offset: -300,
-});
+}); 
 
 const root = ReactDOM.createRoot(document.getElementById("root"), {
   throwIfNamespace: false,
