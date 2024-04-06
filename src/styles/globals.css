@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    @apply !w-[2px] !h-[2px] !bg-[#181818];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply !bg-yellow-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply !w-[0px] !h-[0px];
+  }
+  .no-scroll::-webkit-scrollbar {
+    @apply !w-[0px] !h-[0px];
+  }
+
+  img,
+  Image {
+    @apply select-none;
+  }
+}
+body {
+  @apply !bg-[#181818] text-white font-["Onest"] overflow-x-hidden selection:bg-gray-300/30;
+}
+
+.text-glow {
+  color: #fff;
+  filter: drop-shadow(0 0 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-more {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  border: none;
+}
+
+.text-more {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #f1e05a;
+  letter-spacing: 3px;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.text-more .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
