@@ -26,37 +26,37 @@ aos.init({
   easing: "ease-out-cubic",
   once: true,
   offset: -300,
-}); 
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"), {
   throwIfNamespace: false,
 });
 
 root.render(
-  // <React.StrictMode>
-  <Suspense fallback={null}>
-    <Analytics />
-    <SpeedInsights />
-    <AnimatedCursor
-      innerSize={8}
-      outerSize={35}
-      innerScale={1}
-      outerScale={2}
-      outerAlpha={0}
-      hasBlendMode={true}
-      innerStyle={{
-        backgroundColor: "#0ea5e9",
-      }}
-      outerStyle={{
-        border: "3px solid #eab308",
-      }}
-    />
-    <ReactLenis root options={lenis}>
-      <ParallaxProvider>
-        <Head />
-        <Home />
-      </ParallaxProvider>
-    </ReactLenis>
-  </Suspense>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <Suspense fallback={null}>
+      <Analytics />
+      <SpeedInsights />
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={2}
+        outerAlpha={0}
+        hasBlendMode={true}
+        innerStyle={{
+          backgroundColor: "#0ea5e9",
+        }}
+        outerStyle={{
+          border: "3px solid #eab308",
+        }}
+      />
+      <ReactLenis root options={lenis}>
+        <ParallaxProvider>
+          <Head />
+          <Home />
+        </ParallaxProvider>
+      </ReactLenis>
+    </Suspense>
+  </React.StrictMode>
 );
