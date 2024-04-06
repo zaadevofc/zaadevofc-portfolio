@@ -3,8 +3,6 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { Analytics } from "@vercel/analytics/react";
 import aos from "aos";
 import "aos/dist/aos.css";
-import studio from "@theatre/studio";
-import extension from "@theatre/r3f/dist/extension";
 import React, { Suspense } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import ReactDOM from "react-dom/client";
@@ -34,7 +32,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"), {
 });
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Suspense fallback={null}>
       <Analytics />
       <AnimatedCursor
@@ -58,5 +56,5 @@ root.render(
         </ParallaxProvider>
       </ReactLenis>
     </Suspense>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

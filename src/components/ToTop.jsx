@@ -1,10 +1,9 @@
 
 import { LuArrowUp } from "react-icons/lu";
-
-
-import React from 'react';
-
+import { use } from 'react';
+const getProduct = fetch('https://dummyjson.com/products/1').then(res => res.json())
 const ToTop = () => {
+  const o = use(getProduct)
   return (
     <>
       <div
